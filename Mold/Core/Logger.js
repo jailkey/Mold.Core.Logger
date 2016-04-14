@@ -8,9 +8,10 @@ Seed({
 		type : "module",
 		include : [
 			{ Helper : "Mold.Core.CLIHelper" }
-		]
+		],
+		test : "Mold.Test.Core.Logger"
 	},
-	function(modul){
+	function(module){
 
 
 		var _extractStackLine = function(line){
@@ -46,7 +47,6 @@ Seed({
 			stack = stack.replace(/  /g, '');
 			var stackParts = stack.split("\n");
 			var currentLine = stackParts[lineNumber];
-			
 			return  _extractStackLine(currentLine);
 		}
 
@@ -101,10 +101,7 @@ Seed({
 					
 				}
 				Helper.write(Helper.BGCOLOR_RESET).lb();
-			})
-			.catch(function(err){
-				console.log("err", err)
-			})
+			});
 
 			return promise;
 		}
@@ -168,6 +165,6 @@ Seed({
 			getStackInfo : _getStackInfo
 		}
 
-		modul.exports = new Logger();
+		module.exports = new Logger();
 	}
 )
