@@ -1,0 +1,22 @@
+{
+	"name": "Mold.Core.Logger",
+	"version": "0.0.1",
+	"dependencies": [
+		{
+			"name": "Mold.Core.Test",
+			"path": "https://raw.githubusercontent.com/jailkey/Mold.Core.Test/master/",
+			"version": "0.0.1"
+		},
+		{
+			"name": "Mold",
+			"path": "https://raw.githubusercontent.com/jailkey/MoldJS/master/",
+			"version": "0.2.3"
+		}
+	],
+	"repositories": {
+		"Mold": "Mold/"
+	},
+	"seeds": [
+		"Mold.Core.Logger"
+	]
+}
